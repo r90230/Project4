@@ -28,6 +28,7 @@ var additionArray = function (array){
 			emptyNumber += array[i];
 			}
 	}
+	return emptyNumber
 };
 
 additionArray(addition)	
@@ -41,3 +42,13 @@ var stringSwitch = function(string){	// Returns string to Number
 console.log(stringSwitch("47"));	
 
 
+var dateToday = new Date(2014, 6, 7);	// Shows elapsed dates
+var otherDate = new Date(2014, 1, 7);
+var elapse;
+var elapsedTime = function(today,other){
+	elapse = (dateToday.getTime() - otherDate.getTime()) / (1000*60*60*24);
+	return elapse
+	}
+	
+elapsedTime(dateToday, otherDate)
+console.log("The days elapsed between the two dates provided is " + parseInt(elapse));
